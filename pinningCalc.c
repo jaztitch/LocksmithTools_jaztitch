@@ -5,19 +5,19 @@
 #define PIN_COUNT 6
 #define MAX_PINS_PER_STACK 5
 
-int main(void) {
-    int keyNum;
-    char keys[MAX_KEYS][PIN_COUNT + 1];
-    int bottomPins[PIN_COUNT] = {0};
-    int masterStacks[PIN_COUNT][MAX_PINS_PER_STACK] = {{0}};
-    int stackHeights[PIN_COUNT] = {0};
-
 int welcome(){
     printf("\rWelcome to the pinning calculator.\n");
     sleep(1.5);
     printf("\rHow many keys do you need to work this lock?\nEnter amount (1-7): ");
     scanf("%d", &keyNum);
 }
+
+int main(void) {
+    int keyNum;
+    char keys[MAX_KEYS][PIN_COUNT + 1];
+    int bottomPins[PIN_COUNT] = {0};
+    int masterStacks[PIN_COUNT][MAX_PINS_PER_STACK] = {{0}};
+    int stackHeights[PIN_COUNT] = {0};
 
 welcome();
 
