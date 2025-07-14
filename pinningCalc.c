@@ -5,6 +5,8 @@
 #define PIN_COUNT 6
 #define MAX_PINS_PER_STACK 5
 
+int keyNum;
+
 int welcome(){
     printf("\rWelcome to the pinning calculator.\n");
     sleep(1.5);
@@ -13,7 +15,6 @@ int welcome(){
 }
 
 int main(void) {
-    int keyNum;
     char keys[MAX_KEYS][PIN_COUNT + 1];
     int bottomPins[PIN_COUNT] = {0};
     int masterStacks[PIN_COUNT][MAX_PINS_PER_STACK] = {{0}};
